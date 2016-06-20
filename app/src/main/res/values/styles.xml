@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    
+    <style name="AnimationPreview">  
+        <item name="android:windowEnterAnimation">@anim/my_scale_action</item>  
+        <item name="android:windowExitAnimation">@anim/my_alpha_action</item>  
+    </style>  
+
+</resources>

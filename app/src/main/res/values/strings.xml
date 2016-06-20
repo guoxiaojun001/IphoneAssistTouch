@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">EasyRemind</string>
+    <string name="hello_world">Show Touch View</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">RemindEasy</string>
+    
+    <string name="show_setting_table_item_common_use">常用</string>
+    <string name="show_setting_table_item_screen_lock">锁屏</string>
+    <string name="show_setting_table_item_notification">通知</string>
+    
+    <string name="show_setting_table_item_phone">电话</string>
+    <string name="show_setting_table_item_page">1</string>
+    <string name="show_setting_table_item_camera">相机</string>
+    
+    <string name="show_setting_table_item_back">返回</string>
+    <string name="show_setting_table_item_home">主页</string>
+    <string name="show_setting_table_item_exit_touch">退出</string>
+
+</resources>
