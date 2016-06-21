@@ -142,6 +142,7 @@ public class MyWindowManager {
 				launcherParams.y = screenHeight - RocketLauncher.height;
 				launcherParams.type = LayoutParams.TYPE_PHONE;
 				launcherParams.format = PixelFormat.RGBA_8888;
+				//此时因为设置左上角，然后设置x y的值 所以才会显示到底部去
 				launcherParams.gravity = Gravity.LEFT | Gravity.TOP;
 				launcherParams.width = RocketLauncher.width;
 				launcherParams.height = RocketLauncher.height;

@@ -135,7 +135,8 @@ public class FloatWindowSmallView extends LinearLayout {
 				launchRocket();
 			} else {
 				updateViewStatus();
-				// 如果手指离开屏幕时，xDownInScreen和xInScreen相等，且yDownInScreen和yInScreen相等，则视为触发了单击事件。
+				// 如果手指离开屏幕时，xDownInScreen和xInScreen相等，
+				// 且yDownInScreen和yInScreen相等，则视为触发了单击事件。
 				if (xDownInScreen == xInScreen && yDownInScreen == yInScreen) {
 					openBigWindow();
 				}
@@ -254,10 +255,22 @@ public class FloatWindowSmallView extends LinearLayout {
 		@Override
 		protected void onPostExecute(Void result) {
 			// 火箭升空结束后，回归到悬浮窗状态
+			smallWindowLayout.setVisibility(View.GONE);
+			rocketImg.setVisibility(View.VISIBLE);
+
+			try {
+				smallWindowLayout.setVisibility(View.GONE);
+				rocketImg.setVisibility(View.GONE);
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
 			updateViewStatus();
 			mParams.x = (int) (xDownInScreen - xInView);
 			mParams.y = (int) (yDownInScreen - yInView);
 			windowManager.updateViewLayout(FloatWindowSmallView.this, mParams);
+
 		}
 
 	}

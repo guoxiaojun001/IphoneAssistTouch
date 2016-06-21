@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import freeman.rx.gxj.com.iphoneassisttouch.R;
 import freeman.rx.gxj.com.iphoneassisttouch.service.FloatWindowService;
+import freeman.rx.gxj.com.iphoneassisttouch.windowmanager.AssistMenuWindowManager;
 
 public class FloatWindowMenuView extends LinearLayout {
 

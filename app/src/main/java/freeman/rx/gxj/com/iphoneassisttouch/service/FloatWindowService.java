@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import freeman.rx.gxj.com.iphoneassisttouch.windowmanager.AssistMenuWindowManager;
+
 public class FloatWindowService extends Service {
 
     /**
