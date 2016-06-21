@@ -8,12 +8,14 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.TextView;
 
 import freeman.rx.gxj.com.iphoneassisttouch.view.AssistTouchViewLayout;
-import freeman.rx.gxj.com.iphoneassisttouch.view.FloatWindowBigView;
+import freeman.rx.gxj.com.iphoneassisttouch.view.CircleMenuLayout;
+import freeman.rx.gxj.com.iphoneassisttouch.view.FloatWindowMenuView;
 
 public class MyWindowManager {
 
@@ -25,7 +27,7 @@ public class MyWindowManager {
 	/**
 	 * 大悬浮窗View的实例
 	 */
-	private static FloatWindowBigView bigWindow;
+	private static FloatWindowMenuView bigWindow;
 
 	/**
 	 * 小悬浮窗View的参数
@@ -47,11 +49,11 @@ public class MyWindowManager {
 	 */
 	private static ActivityManager mActivityManager;
 
+
 	/**
 	 * 创建一个小悬浮窗。初始位置为屏幕的右部中间位置。
-	 * 
 	 * @param context
-	 *            必须为应用程序的Context.
+	 *  必须为应用程序的Context.
 	 */
 	public static void createSmallWindow(Context context) {
 		WindowManager windowManager = getWindowManager(context);
@@ -100,17 +102,18 @@ public class MyWindowManager {
 		WindowManager windowManager = getWindowManager(context);
 		int screenWidth = windowManager.getDefaultDisplay().getWidth();
 		int screenHeight = windowManager.getDefaultDisplay().getHeight();
+
 		if (bigWindow == null) {
-			bigWindow = new FloatWindowBigView(context);
+			bigWindow = new FloatWindowMenuView(context,true);
 			if (bigWindowParams == null) {
 				bigWindowParams = new LayoutParams();
-				bigWindowParams.x = screenWidth / 2 - FloatWindowBigView.viewWidth / 2;
-				bigWindowParams.y = screenHeight / 2 - FloatWindowBigView.viewHeight / 2;
+				bigWindowParams.x = screenWidth / 2 - FloatWindowMenuView.viewWidth / 2;
+				bigWindowParams.y = screenHeight / 2 - FloatWindowMenuView.viewHeight / 2;
 				bigWindowParams.type = LayoutParams.TYPE_PHONE;
 				bigWindowParams.format = PixelFormat.RGBA_8888;
 				bigWindowParams.gravity = Gravity.LEFT | Gravity.TOP;
-				bigWindowParams.width = FloatWindowBigView.viewWidth;
-				bigWindowParams.height = FloatWindowBigView.viewHeight;
+				bigWindowParams.width = FloatWindowMenuView.viewWidth;
+				bigWindowParams.height = FloatWindowMenuView.viewHeight;
 			}
 			windowManager.addView(bigWindow, bigWindowParams);
 		}
