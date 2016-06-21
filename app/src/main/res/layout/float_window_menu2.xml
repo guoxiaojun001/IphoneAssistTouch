@@ -5,7 +5,6 @@
 	android:id="@+id/big_window_layout"
 	android:layout_width="300dp"
 	android:layout_height="300dp"
-	android:background="@mipmap/bg"
 	android:gravity="center_vertical"
 	android:orientation="horizontal" >
 
@@ -25,7 +24,7 @@
 				android:layout_width="104.0dip"
 				android:layout_height="104.0dip"
 				android:layout_centerInParent="true"
-				android:background="@mipmap/turnplate_center_unlogin" />
+				android:background="@mipmap/center" />
 
 			<ImageView
 				android:layout_width="116.0dip"
