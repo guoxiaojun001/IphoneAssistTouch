@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="freeman.rx.gxj.com.iphoneassisttouch">
+    package="freeman.rx.gxj.com.rocketlauncher">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.FloatWindowService" />
+
+        <service android:name=".FloatWindowService"></service>
     </application>
 
 </manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/small_window_layout"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:background="@mipmap/bg_small" >
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+    
+    <ImageView 
+        android:id="@+id/rocket_img"
+        android:layout_width="45dp"
+        android:layout_height="90dp"
+        android:src="@mipmap/rocket"
+        android:visibility="gone"
+        />
+
+</FrameLayout>

@@ -2,14 +2,12 @@ package freeman.rx.gxj.com.iphoneassisttouch.view;
 
 import android.content.Context;
 import android.content.Intent;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import freeman.rx.gxj.com.iphoneassisttouch.MyWindowManager;
 import freeman.rx.gxj.com.iphoneassisttouch.R;
 import freeman.rx.gxj.com.iphoneassisttouch.service.FloatWindowService;
 
@@ -45,8 +43,8 @@ public class FloatWindowMenuView extends LinearLayout {
 			@Override
 			public void onClick(View v) {
 				// 点击关闭悬浮窗的时候，移除所有悬浮窗，并停止Service
-				MyWindowManager.removeBigWindow(context);
-				MyWindowManager.removeSmallWindow(context);
+				AssistMenuWindowManager.removeBigWindow(context);
+				AssistMenuWindowManager.removeSmallWindow(context);
 				Intent intent = new Intent(getContext(), FloatWindowService.class);
 				context.stopService(intent);
 			}
@@ -55,8 +53,8 @@ public class FloatWindowMenuView extends LinearLayout {
 			@Override
 			public void onClick(View v) {
 				// 点击返回的时候，移除大悬浮窗，创建小悬浮窗
-				MyWindowManager.removeBigWindow(context);
-				MyWindowManager.createSmallWindow(context);
+				AssistMenuWindowManager.removeBigWindow(context);
+				AssistMenuWindowManager.createSmallWindow(context);
 			}
 		});
 	}
@@ -81,8 +79,8 @@ public class FloatWindowMenuView extends LinearLayout {
 						Toast.makeText(context, mItemTexts[pos],
 								Toast.LENGTH_SHORT).show();
 
-						MyWindowManager.removeBigWindow(context);
-						MyWindowManager.createSmallWindow(context);
+						AssistMenuWindowManager.removeBigWindow(context);
+						AssistMenuWindowManager.createSmallWindow(context);
 					}
 
 					@Override
@@ -90,8 +88,8 @@ public class FloatWindowMenuView extends LinearLayout {
 						Toast.makeText(context,	"关闭悬浮球",
 								Toast.LENGTH_SHORT).show();
 
-						MyWindowManager.removeBigWindow(context);
-						MyWindowManager.removeSmallWindow(context);
+						AssistMenuWindowManager.removeBigWindow(context);
+						AssistMenuWindowManager.removeSmallWindow(context);
 						Intent intent = new Intent(getContext(), FloatWindowService.class);
 						context.stopService(intent);
 

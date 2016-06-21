@@ -10,8 +10,8 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import freeman.rx.gxj.com.iphoneassisttouch.MyWindowManager;
 import freeman.rx.gxj.com.iphoneassisttouch.R;
+import freeman.rx.gxj.com.iphoneassisttouch.windowmanager.AssistMenuWindowManager;
 
 public class AssistTouchViewLayout extends LinearLayout {
 
@@ -56,7 +56,7 @@ public class AssistTouchViewLayout extends LinearLayout {
 		viewWidth = view.getLayoutParams().width;
 		viewHeight = view.getLayoutParams().height;
 		TextView percentView = (TextView) findViewById(R.id.percent);
-		percentView.setText(MyWindowManager.getUsedPercentValue(context));
+		percentView.setText(AssistMenuWindowManager.getUsedPercentValue(context));
 	}
 
 	@Override
@@ -112,8 +112,8 @@ public class AssistTouchViewLayout extends LinearLayout {
 	 * 打开大悬浮窗，同时关闭小悬浮窗。
 	 */
 	private void openBigWindow() {
-		MyWindowManager.createBigWindow(getContext());
-		MyWindowManager.removeSmallWindow(getContext());
+		AssistMenuWindowManager.createBigWindow(getContext());
+		AssistMenuWindowManager.removeSmallWindow(getContext());
 	}
 
 	/**

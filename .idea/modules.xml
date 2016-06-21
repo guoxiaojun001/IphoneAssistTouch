@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IphoneAssistTouch.iml" filepath="$PROJECT_DIR$/IphoneAssistTouch.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rocketlauncher/rocketlauncher.iml" filepath="$PROJECT_DIR$/rocketlauncher/rocketlauncher.iml" />
     </modules>
   </component>
 </project>

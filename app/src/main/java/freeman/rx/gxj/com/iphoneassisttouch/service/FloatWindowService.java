@@ -15,9 +15,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import freeman.rx.gxj.com.iphoneassisttouch.MyWindowManager;
-import freeman.rx.gxj.com.iphoneassisttouch.view.AssistTouchViewLayout;
-
 public class FloatWindowService extends Service {
 
     /**
@@ -58,30 +55,30 @@ public class FloatWindowService extends Service {
         @Override
         public void run() {
             // 当前界面是桌面，且没有悬浮窗显示，则创建悬浮窗。
-            if (isHome() && !MyWindowManager.isWindowShowing()) {
+            if (isHome() && !AssistMenuWindowManager.isWindowShowing()) {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        MyWindowManager.createSmallWindow(getApplicationContext());
+                        AssistMenuWindowManager.createSmallWindow(getApplicationContext());
                     }
                 });
             }
             // 当前界面不是桌面，且有悬浮窗显示，则移除悬浮窗。
-            else if (!isHome() && MyWindowManager.isWindowShowing()) {
+            else if (!isHome() && AssistMenuWindowManager.isWindowShowing()) {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        MyWindowManager.removeSmallWindow(getApplicationContext());
-                        MyWindowManager.removeBigWindow(getApplicationContext());
+                        AssistMenuWindowManager.removeSmallWindow(getApplicationContext());
+                        AssistMenuWindowManager.removeBigWindow(getApplicationContext());
                     }
                 });
             }
             // 当前界面是桌面，且有悬浮窗显示，则更新内存数据。
-            else if (isHome() && MyWindowManager.isWindowShowing()) {
+            else if (isHome() && AssistMenuWindowManager.isWindowShowing()) {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        MyWindowManager.updateUsedPercent(getApplicationContext());
+                        AssistMenuWindowManager.updateUsedPercent(getApplicationContext());
                     }
                 });
             }

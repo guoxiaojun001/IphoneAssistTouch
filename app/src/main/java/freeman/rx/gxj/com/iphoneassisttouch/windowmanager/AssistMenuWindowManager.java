@@ -1,23 +1,22 @@
-package freeman.rx.gxj.com.iphoneassisttouch;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+package freeman.rx.gxj.com.iphoneassisttouch.windowmanager;
 
 import android.app.ActivityManager;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+import freeman.rx.gxj.com.iphoneassisttouch.R;
 import freeman.rx.gxj.com.iphoneassisttouch.view.AssistTouchViewLayout;
-import freeman.rx.gxj.com.iphoneassisttouch.view.CircleMenuLayout;
 import freeman.rx.gxj.com.iphoneassisttouch.view.FloatWindowMenuView;
 
-public class MyWindowManager {
+public class AssistMenuWindowManager {
 
 	/**
 	 * 小悬浮窗View的实例
